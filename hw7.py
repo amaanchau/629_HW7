@@ -64,31 +64,3 @@ def dijkstra(graph, start):
                 heapq.heappush(pq, (new_dist, v))
     
     return dist, parent
-
-def get_path(parent, target):
-    path = []
-    current = target
-    
-    while current is not None:
-        path.append(current)
-        current = parent[current]
-    
-    path.reverse()
-    return path
-
-dist, parent = dijkstra(graph, 1)
-
-print("Distances from node 1:")
-for node in range(1, 23):
-    print(f"1 -> {node} = {dist[node]}")
-
-targets = [6, 8, 9, 15, 16, 22]
-
-print("\nRequired distances:")
-for t in targets:
-    print(f"1 -> {t} = {dist[t]}")
-
-print("\nShortest paths:")
-for t in targets:
-    path = get_path(parent, t)
-    print(f"Path to {t}: {path}")
