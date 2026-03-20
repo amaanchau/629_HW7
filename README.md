@@ -14,6 +14,10 @@ We model the map as a weighted graph with vertices 1 through 22.
 
 The goal is to compute shortest paths from source node `1` and determine the most likely escape destination.
 
+### Map
+
+![College Station map with numbered waypoints](image.png)
+
 ## Approach
 
 1. **Graph Representation**
